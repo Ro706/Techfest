@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NavBar from './component/NavBar';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import NavBar from './component/NavBar';
 import { BackgroundLines } from "./component/ui/background-lines";
 import { SparklesCore } from "./component/ui/sparkles";
 import './App.css';
@@ -14,8 +14,9 @@ const Login = () => <div>Login Page</div>;
 
 const App = () => {
     return (
-        <Router>
-            <NavBar />
+        <>
+        {/* // <Router> */}
+            {/* <NavBar /> */}
             <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
                 <div className="logo">
                     <img src="./logo.png" alt="logo" />
@@ -50,14 +51,15 @@ const App = () => {
                     COMING SOON!!!
                 </h2>
             </BackgroundLines>
-            <Routes>
+            {/* <Routes>
                 <Route path="/about" element={<About />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/login" element={<Login />} />
-            </Routes>
-        </Router>
+            </Routes> */}
+        {/* </Router> */}
+        </>
     );
 };
 
