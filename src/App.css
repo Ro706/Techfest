@@ -35,7 +35,10 @@ body {
   animation: typing 6.5s steps(40, end), blink-caret 1.75s step-end infinite;
   animation-iteration-count: infinite;
 }
-
+footer>p{
+  color:#afa8a8;
+  font-size: medium;
+}
 .input-group {
   display: flex;
   align-items: center;
@@ -139,8 +142,8 @@ body {
     font-size: 12px;
     letter-spacing: 1px;
   }
-  p{
-    font-size: 20px;
+  footer>p{
+    font-size: 14px;
     text-align: center;
   }
 
