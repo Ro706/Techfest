@@ -8,45 +8,43 @@ body {
   font-family: "Audiowide", sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #000000; /* Main background color */
+  background-color: #000000;
   color: #ffffff;
 }
 
 .logo {
-  display: flex; /* Use flexbox for alignment */
-  justify-content: center; /* Center the logo horizontally */
-  align-items: center; /* Center the logo vertically */
-  flex-direction: column; /* Stack elements vertically */
-  margin-bottom: 20px; /* Add space below the logo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
   padding-top: 20px;
 }
 
 .logo img {
-  height: 100px; /* Set a fixed height for the logo */
-  width: auto; /* Maintain aspect ratio */
+  height: 100px;
+  width: auto;
 }
 
-/* Typing Animation */
 .typing-animation {
   font-family: "Audiowide", sans-serif;
   font-weight: 800;
   font-style: normal;
-  overflow: hidden; /* Ensures the text is hidden initially */
-  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden;
+  white-space: nowrap;
   animation: typing 6.5s steps(40, end), blink-caret 1.75s step-end infinite;
-  animation-iteration-count: infinite; /* Loop the animation */
+  animation-iteration-count: infinite;
 }
 
-/* From Uiverse.io by alexruix */ 
 .input-group {
   display: flex;
   align-items: center;
 }
 
 .input {
-  margin-top:30px;
+  margin-top: 30px;
   min-height: 50px;
-  max-width: 550px;
+  max-width: 250px;
   padding: 0 1rem;
   color: #fff;
   font-size: 15px;
@@ -56,89 +54,134 @@ body {
 }
 
 .button--submit {
-  margin-top:30px;
+  margin-top: 30px;
   min-height: 50px;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   border: none;
   border-radius: 0 6px 6px 0;
   background-color: #5e4dcd;
   color: #fff;
   font-size: 15px;
   cursor: pointer;
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .button--submit:hover {
   background-color: #5e5dcd;
 }
 
-.input:focus, .input:focus-visible {
+.input:focus,
+.input:focus-visible {
   border-color: #3898EC;
   outline: none;
 }
 
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Responsive Styles for Event Announcement Text */
+.event-announcement {
+  max-width: 90%;
+  margin: 0 auto;
+  font-size: 0.875rem; /* 14px */
+  color: #afa8a8; /* Neutral-700 color */
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .event-announcement {
+    max-width: 40rem;
+    font-size: 1rem; /* 16px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .event-announcement {
+    font-size: 1.125rem; /* 18px */
+  }
+}
+
 @keyframes typing {
-  0% { width: 0 }
-  50% { width: 100% }
-  100% { width: 0 }
+  0% { width: 0; }
+  50% { width: 100%; }
+  100% { width: 0; }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
+  from, to { border-color: transparent; }
   50% { border-color: rgba(255, 166, 0, 1); }
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
   .logo img {
-    height: 75px; /* Adjust height for smaller screens */
+    height: 75px;
   }
 
   .bg-clip-text {
-    font-size: 2rem; /* Increase font size for medium screens */
+    font-size: 2rem;
   }
+  .input{
+    max-width: 150px;
+    min-height: 40px;
+    font-size: 12px;
+    padding: 0 0.5rem;
+    letter-spacing: 1px;
+  }
+  .button--submit{
+    min-height: 40px;
+    padding: 0.5em 1em;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  p{
+    font-size: 20px;
+    text-align: center;
+  }
+
 }
 
 @media (max-width: 600px) {
   .logo {
-    justify-content: center; /* Center the logo horizontally */
-    align-items: center; /* Center the logo vertically */
-    height: auto; /* Adjust height for phone screens */
-    padding-top: 450px; /* Adjust padding for phone screens */
-    margin-bottom: 20px; /* Add space below the logo */
+    justify-content: center;
+    /* align-items: center; */
+    height: auto;
+    padding-top: 30px;
+    margin-bottom: 20px;
   }
 
   .logo img {
-    height: 60px; /* Adjust height for phone screens */
+    height: 60px;
   }
 
   .bg-clip-text {
-    font-size: 2rem; /* Adjust font size for phone screens */
-    padding-top: 20px; /* Add space above the text */
-    padding-bottom: 50px; /* Add space below the text */
+    font-size: 2rem;
+    padding-top: 20px;
+    padding-bottom: 50px;
   }
 
   .max-w-xl {
-    max-width: 90%; /* Adjust max width for phone screens */
+    max-width: 100%;
   }
-
-  .gradient-line-sky-thin {
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  
 }
 
 /* Responsive Styles for Sparkles Section */
 .sparkles-container {
-  width: 70%; /* Full width for small screens */
-  height: 10rem; /* Adjust height for small screens */
+  width: 70%;
+  height: 10rem;
   position: relative;
 }
 
 @media (min-width: 768px) {
   .sparkles-container {
-    width: 40rem; /* Fixed width for medium and larger screens */
-    height: 6rem; /* Fixed height for medium and larger screens */
+    width: 40rem;
+    height: 6rem;
   }
 }
 
@@ -185,22 +228,15 @@ body {
   mask-image: radial-gradient(350px 200px at top, transparent 20%, white);
 }
 
-/* Center .gradient-line-sky-thin in phone mode */
 @media (max-width: 600px) {
-  .gradient-line-sky-thin {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .gradient-line-sky {
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  .gradient-line-sky-thin,
+  .gradient-line-sky,
   .gradient-line-thin {
     left: 50%;
     transform: translateX(-50%);
   }
-  /* Additional radial-gradient-mask for specific use case */
-.radial-gradient-mask {
-  mask-image: radial-gradient(200px 100px at top, transparent 20%, white);
-}
+
+  .radial-gradient-mask {
+    mask-image: radial-gradient(200px 100px at top, transparent 20%, white);
+  }
 }
