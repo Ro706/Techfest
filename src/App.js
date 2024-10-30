@@ -19,7 +19,7 @@ const App = () => {
                 </p>
                 <div class="input-group">
                     <input type="email" className="input" id="Email" name="Email" placeholder="Email" autoComplete="off"/>
-                    <input className="button--submit" value="Get Notified" type="submit"/>
+                    <input className="button--submit" value="Get Notified" type="submit" onClick={() => alert("Thank you for subscribing!")}/>
                 </div>
             </div>
             <footer>
